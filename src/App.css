@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  font-family: "Lato", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.body{
+  background-color: #eee4e0;
+  margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.encabezado{
+  height: 85pt;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:680px){
+  .divisor{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5pt;
+    width: 2%;
+  }
+}
+.usersvg{
+  height: 20pt;
+}
+nav ul{
+  text-align:center;
+}
+nav ul li{
+  display: inline-block;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+nav ul li a{
+  color: rgb(44, 38, 38);/*color del trexto*/
+  font-size: 13pt;
+  padding: 10pt 15pt; /* ancho de altura 9px y largo de 15px*/
+  border-radius: 10pt; /*borde del rectangulo */
+  text-transform: uppercase; /*textodel menu*/
+}
+li a.active, li a:hover{
+  background: rgb(172, 172, 172); /*color de lo que incluye el menu */
+  transition: .5s; /*Trancicion de letras*/
+}
+.divisor{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5pt;
+  width: 100%;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  height: 350pt;
+  padding-bottom: 20pt;
+}
+.main1{
+  position: absolute;
+  height: 350pt;
+}
+.main2{
+  display: flex;
+  position: absolute;
+  height: 180pt;
+  top: 315pt;
+  left: 150pt;
+  color: white;
+  text-shadow:1pt 1pt 2pt black;
+}
+.collection{
+  position: absolute;
+  left: 8%; 
+  right: 5%; 
+  top: 15%; 
+  text-align: center;
+}
+.ropa1{
+  position: absolute; top: 730pt; left: 210pt;
+}
+.ropa2{position: absolute; top: 730pt; left: 460pt;}
+.ropa3{position: absolute; top: 730pt; left: 715pt;}
+
+.venta{
+  display: flex;
+  justify-content: space-around;
+  height: 200pt;
+  padding-left: 110pt;
+  padding-right: 110pt;
+  padding-top: 10pt;
+}
+.banner1{
+  display: flex;
+  justify-content: center;
+}
+.producto{
+  padding-top: 20pt;
+  display: flex;
+  justify-content: center;
+  height: 450px;
+}
+.carrito{
+  background-color: rgba(238, 228, 224, 0.7);
+  color: rgba(37, 30, 27, 0.7);
+  border-color: #251E1B;
+  height: 8%;
+  margin-bottom: 2%;
+}
+.comprar{
+  color: #EEE4E0;
+  background-color: #251E1B;
+  border-width: 0px;
+  height: 8%;
+}
+.detalles{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1% 17% 0% 17%;
+  padding-top: 2%;
+}
+.somos{
+  display: flex; justify-content: center; padding-top: 2%;
+}
+.somosimg{height: 400pt;}
+
+
+.pie-pagina{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  background-color: rgb(44, 38, 38);
+  display: flex;
+ /* color: rgb(139, 20, 20);*/
+ color: white;
+  justify-content: center;
+  margin-top: 8%;
+  font-size: 15px;
+}
+
+.pie-pagina .grupo-1{
+  width: 100%;
+ /* max-width: 1200px;*/
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+  flex-direction: column;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: aqua;
+}
+.pie-pagina .grupo-2{
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+.mejoreshombre{
+  position:absolute; color:white;
+  padding-top: 0pt;
+}
+
+.venta2{
+  padding-bottom: 2%; padding-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  height: 200pt;
+  padding-left: 110pt;
+  padding-right: 110pt;
+}
+
+.producto1lin1{
+  position: absolute; top: 450pt; left: 210pt;
+}
+.producto2lin1{
+  position: absolute; top: 450pt; left: 460pt;
+}
+.producto3lin1{
+  position: absolute; top: 450pt; left: 715pt;
+}
+.producto1lin2{
+  position: absolute; top: 690pt; left: 210pt;
+}
+.producto2lin2{
+  position: absolute; top: 690pt; left: 460pt;
+}
+.producto3lin2{
+  position: absolute; top: 690pt; left: 715pt;
+}
+.producto1lin3{
+  position: absolute; top: 930pt; left: 210pt;
+}
+.producto2lin3{
+  position: absolute; top: 930pt; left: 460pt;
+}
+.producto3lin3{
+  position: absolute; top: 930pt; left: 715pt;
+}
+.producto1lin1wo{
+  display:flex;
+}
+.alevosianame{position: absolute; color:white;}
+
+.slider{
+  width:72%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider ul{
+  padding: 0;
+  display: flex;
+  width: 400%;
+  animation: infinite alternate linear;
+}
+.slider li{
+  width: 100%;
+  list-style: none;
+
+}
+.slider img{
+  width: 100%;
+}
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div>
-      Este es el codigo que se subirá
+      Este es el codigo que se subirá 2
       <Routes>
         <Route path='/' element={<Plantilla/>}>
           <Route path='/' element={<Inicio/>}/>

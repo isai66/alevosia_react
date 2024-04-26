@@ -45,6 +45,7 @@ function Registro2 () {
     const getUsuarios = ()=>{
         Axios.get("http://localhost:3001/bitacora").then((response)=>{
             setUsuarios(response.data);
+            console.log(response.data);
         });
     }
     const getLogins = ()=>{

@@ -22,7 +22,8 @@ const Plantilla = props =>{
         </header>
         <nav>
           <ul>
-            <li class="si"><img class="usersvg" src={user}/>
+            <li class="si">
+              {/*<img class="usersvg" src={user}/>*/}
               <Link to="/login">Entrar</Link>
             </li>
             <li>
@@ -41,7 +42,10 @@ const Plantilla = props =>{
               <Link to="/Registro2">Contáctanos</Link>
             </li>
             <li>
-              <button onClick={logout}>Cerar Sesion</button>
+              <Link to="/">🛒</Link>
+            </li>
+            <li>
+              <button onClick={logout}>Cerrar Sesion</button>
             </li>
           </ul>
           <div class="divisor">

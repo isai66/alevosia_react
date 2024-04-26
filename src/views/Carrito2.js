@@ -14,7 +14,7 @@ const Carrito2 = () =>{
     console.log(userData.nombre);
 
     return (
-        <div class="container">
+        <div class="containercarrito">
             <h1>{isAuthenticated ? `Hola ${userData.username}` : "No te has logueado"}</h1>
     <h2>Proceder al Pago</h2>
     <div class="summary">

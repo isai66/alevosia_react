@@ -26,7 +26,8 @@ function App() {
 
   const [usuariosList,setUsuarios] = useState([]);
 console.log(userData.rol, userData.nombre)
-  const getUsuarios = ()=>{
+  
+const getUsuarios = ()=>{
     Axios.get("http://localhost:3001/bitacora").then((response)=>{
         setUsuarios(response.data);
     });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .divproducto{
     display: flex; padding-left: 2%; flex-direction: column; margin: 0%;
 }
@@ -9,16 +8,4 @@
 .precio{padding-top: 2%; padding-left: 2%; margin: 0%;}
 .divcantidad{padding-left: 2%; padding-bottom: 8%;}
 .cantidad{margin: 0%; padding-bottom: 2%;}
-=======
-.divproducto{
-    display: flex; padding-left: 2%; flex-direction: column; margin: 0%;
-}
-.tituloproducto{
-    margin: 0%;
-}
-.sku{padding-top: 2%; padding-left: 2%; margin: 0%;}
-.precio{padding-top: 2%; padding-left: 2%; margin: 0%;}
-.divcantidad{padding-left: 2%; padding-bottom: 8%;}
-.cantidad{margin: 0%; padding-bottom: 2%;}
->>>>>>> ca5ec4f0db7767eda94149319fecce4a29b4d0fd
 .inputcantidad{height: 65%;}

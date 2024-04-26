@@ -87,10 +87,12 @@ nav ul li a{
   padding: 10pt 15pt; /* ancho de altura 9px y largo de 15px*/
   border-radius: 10pt; /*borde del rectangulo */
   text-transform: uppercase; /*textodel menu*/
+  text-decoration: none;
 }
 li a.active, li a:hover{
   background: rgb(172, 172, 172); /*color de lo que incluye el menu */
   transition: .5s; /*Trancicion de letras*/
+  text-decoration: none;
 }
 .divisor{
   display: flex;
@@ -252,6 +254,34 @@ li a.active, li a:hover{
   height: 200pt;
   padding-left: 110pt;
   padding-right: 110pt;
+  display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.product-card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px;
+  text-align: center;
+}
+
+.card {
+  margin: 50px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #1bcb7f;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+.card button:hover {
+  opacity: 0.7;
 }
 
 .producto1lin1{

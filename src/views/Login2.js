@@ -128,6 +128,10 @@ const Login = () => {
                             <Link to={'/signup'}>
                                 <button class="btn1">Registrate</button>
                             </Link>
+                            <span class='text'>¿Olvidaste tu contraseña?</span>
+                            <Link to={'/EnviarCorreo'}>
+                                <button class="btn1">Actualizala</button>
+                            </Link>
                     </div>
                 </div>
             </div>

@@ -5,13 +5,14 @@ import logo from '../image/logo.png';
 import user from '../image/user.svg';
 import divisor from '../image/divisor.png';
 import women1 from '../image/women/women1.jpg';
+import women2 from '../image/GUEST_5a0281b2-2efd-45cc-9e69-f6e1b676a8f5-edit-edit.jpg'
 import { useAuth } from '../components/authUser'; 
 
 const Carrito2 = () =>{
     const { isAuthenticated, userData } = useAuth();
-    console.log(userData);
+   /* console.log(userData);*/
 
-    console.log(userData.nombre);
+    /*console.log(userData.nombre);*/
 
     return (
         <div class="containercarrito">
@@ -34,7 +35,7 @@ const Carrito2 = () =>{
                 <tr>
                     <td class="product-image sac-loading">    
                         <a href="/" >
-                            <img src={women1} class="product-img"/>
+                            <img src={women2} class="product-img"/>
                         </a>  
                     </td>
                     <td class="product-name sac-loading">

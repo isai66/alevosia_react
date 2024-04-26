@@ -399,7 +399,7 @@ const urlImage='../image/'
                         <CustomInput
                           label="Descripcion"
                           name="descProducto"
-                          pattern={/^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/}
+                         // pattern={/^[a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]+$/}
                           errorMessage="Solo letras y sin espacios"
                           errors={errors}
                           register={register}

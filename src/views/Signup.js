@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios';
+//import Axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaUserShield } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { BsFillShieldLockFill } from "react-icons/bs";
 import { AiOutlineSwapRight } from "react-icons/ai";
-import {MdMarkEmailRead} from "react-icons/md";
+import { MdMarkEmailRead } from "react-icons/md";
 import { IoHome } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 //import '../components/ValidaSignUp'

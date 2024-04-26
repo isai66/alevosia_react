@@ -1,14 +1,16 @@
 import React, { createContext, useState, useContext } from 'react';
 import { jwtDecode } from 'jwt-decode';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext(); 
 
 export const useAuth = () => useContext(AuthContext);
 
+
 export const AuthProvider = ({ children }) => {
     const [authToken, setAuthToken] = useState(localStorage.getItem('token'));
     const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('userData')));
+    const navigateTo = useNavigate();
 
     const login = (token, userData) => {
         localStorage.setItem('token', token);
@@ -24,10 +26,12 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = () => {
+        
         localStorage.removeItem('token');
         setAuthToken(null);
         localStorage.removeItem('userData');
         setUserData(null);
+        navigateTo('/');
     };
 
     const isAuthenticated = !!authToken;

@@ -9,10 +9,18 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useAuth } from '../components/authUser'; 
+import { useContext } from 'react';
+import { dataContext } from '../components/DataContext';
+
+import TotalItems from '../components/cart/TotalItems';
+
 
 
 const Plantilla = props =>{
+
+  const { isAuthenticated, userData } = useAuth();
   const { logout } = useAuth();
+
 
   const {history} = props;
     return (
@@ -24,7 +32,8 @@ const Plantilla = props =>{
           <ul>
             <li class="si">
               {/*<img class="usersvg" src={user}/>*/}
-              <Link to="/login">Entrar</Link>
+              {isAuthenticated ? <Link to="/Profile">Mi cuenta</Link> : <Link to="/login">Entrar</Link>}
+              {/*<Link to="/login">Entrar</Link>*/}
             </li>
             <li>
               <Link to="/" /*class="active"*/>Inicio</Link>
@@ -42,10 +51,12 @@ const Plantilla = props =>{
               <Link to="/Registro2">Contáctanos</Link>
             </li>
             <li>
-              <Link to="/">🛒</Link>
+            {isAuthenticated ? <Link to="/cart"> 🛒 <TotalItems/></Link> : ""}
+              
+            
             </li>
             <li>
-              <button onClick={logout}>Cerrar Sesion</button>
+              {isAuthenticated ? <button onClick={logout}>Cerrar Sesion</button> : ""} 
             </li>
           </ul>
           <div class="divisor">

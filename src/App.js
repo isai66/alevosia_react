@@ -6,6 +6,7 @@ import Inicio from './views/Inicio';
 import Men from './views/Men';
 import NotFound from './views/404';
 import Women from './views/Women';
+import Women2 from './views/Women2';
 import Producto1 from './views/Producto1';
 import Somos from './views/Somos';
 import Chat from './components/Chat';
@@ -20,7 +21,12 @@ import Carrito2 from './views/Carrito2';
 import Carrito3 from './views/Carrito3';
 import Dashboard from './views/Dashborard';
 import Alta from './views/Alta';
+import EnviarCorreo from './views/EnviarCorreo';
+import ActualizarContra from './views/ActualizarContra';
+import Profile from './views/Profile';
+import DataProvider from './components/DataContext';
 import { AuthProvider, useAuth} from './components/authUser';
+import CartContent from './components/cart/CartContent';
 function App() {
 
   return (
@@ -29,30 +35,39 @@ function App() {
     <div>
       
       <AuthProvider>
+        <DataProvider>
         <Routes>
           <Route path='/' element={<Plantilla/>}>
             <Route path='/' element={<Inicio/>}/>
             <Route path='Men' element={<Men/>}/>
             <Route path='Women' element={<Women/>}/>
+            <Route path='Women2' element={<Women2/>}/>
             <Route path='Somos' element={<Somos/>}/>
             <Route path='Busqueda' element={<Busqueda/>}/>
             <Route path="Women/Producto1" element={<Producto1/>}/>
+            <Route path="Women2/Producto1" element={<Producto1/>}/>
             <Route path="Signup" element={<Signup/>}/>
             <Route path="Login" element={<Login2/>}/>
           { /*<Route path="Login2" element={<Login2/>}/>*/}
             <Route path="Registro2" element={<Registro2/>}/>
-            <Route path="Profile" element={<Dashboard/>}/>
-            <Route path="Alta" element={<AltaProductos/>}/>
+            <Route path="Dashboard" element={<Dashboard/>}/>
+            <Route path="Profile" element={<Profile/>}/>
+            <Route path="Cart" element={<PrivateRouteUser><CartContent/></PrivateRouteUser>}/>
+            <Route path="Alta" element={<PrivateRoute><AltaProductos/></PrivateRoute>}/>
+            <Route path="EnviarCorreo" element={<EnviarCorreo/>}/>
+            <Route path="ActualizarContra" element={<ActualizarContra/>}/>
+
       
             <Route path='*' element={<NotFound/>}/>
           </Route>
           <Route>
             <Route path="Carrito" element={<Carrito/>}/>
-            <Route path="Carrito2" element={<Carrito2/>}/>
+            <Route path="Carrito2" element={<PrivateRouteUser><Carrito2/></PrivateRouteUser>}/>
             <Route path="Carrito3" element={<Carrito3/>}/>
 
           </Route>
         </Routes>
+        </DataProvider>
       </AuthProvider>
       <Chat/>
     </div>
@@ -67,6 +82,35 @@ function AltaProductos() {
 
   }
   return !isAuthenticated || userData.rol == null ? <Navigate to="/" /> : <Alta />;
+}
+
+function PrivateRoute({ children }) {
+  const { isAuthenticated, userData } = useAuth();
+
+  // Validación: Usuario no autenticado
+  if (!isAuthenticated) {
+    return <Navigate to="/" />;
+  }
+  
+  // Validación: Usuario autenticado pero sin rol
+  if (isAuthenticated && !userData.rol) {
+    return <Navigate to="/" />;
+  }
+
+  // Si pasa la validación, muestra el contenido de la ruta
+  return children;
+}
+
+function PrivateRouteUser({ children }) {
+  const { isAuthenticated, userData } = useAuth();
+
+  // Validación: Usuario no autenticado
+  if (!isAuthenticated) {
+    return <Navigate to="/" />;
+  }
+
+  // Si pasa la validación, muestra el contenido de la ruta
+  return children;
 }
 
 export default App;

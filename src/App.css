@@ -314,7 +314,20 @@ li a.active, li a:hover{
 .producto1lin1wo{
   display:flex;
 }
-.alevosianame{position: absolute; color:white;}
+.alevosianame{position: absolute; /* Establece el texto como posicionamiento absoluto */
+  top: 50%; /* Lo posiciona en el 50% de la parte superior del contenedor */
+  left: 50%; /* Lo posiciona en el 50% del lado izquierdo del contenedor */
+  transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro del contenedor */
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para mayor legibilidad */
+  padding: 10px; }
+
+.somos1{
+  text-align: center; /* Para centrar horizontalmente el contenido */
+  margin: 0 auto; /* Para centrar el contenedor en la página */
+  width: 80%; /* Ancho del contenedor, ajusta según tus necesidades */
+  border: 1px solid black; /* Solo para visualización, puedes eliminarlo */
+  padding: 20px;
+}
 
 .slider{
   width:72%;

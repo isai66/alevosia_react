@@ -28,13 +28,10 @@ function App() {
 console.log(userData.rol, userData.nombre)
   
 const getUsuarios = ()=>{
-    Axios.get("http://localhost:3001/bitacora").then((response)=>{
-        setUsuarios(response.data);
-    });
+  Axios.get("http://localhost:3001/bitacora").then((response)=>{
+    setUsuarios(response.data);
+  });
 }
-
-
-
   const {
     register,
     handleSubmit,
@@ -45,7 +42,6 @@ const getUsuarios = ()=>{
 
   const onloadProductos= async () => {
     try {
-
       const response = await fetch('http://localhost/webservice_alevosia/obtenerProductos.php', {
           method: 'POST',
           headers: {
@@ -53,37 +49,33 @@ const getUsuarios = ()=>{
           },
           body: JSON.stringify({
           }),
-      });
+      }
+    );
 
-      const result = await response.json();
-  console.log(result);
+    const result = await response.json();
+      console.log(result);
       if (result.done) {
         setProductos(result.message);
-
-        } else {
-
-          
-          console.error('Error en el registro:', result.message);
-
-          if (result.debug_info) {
-              console.error('Información de depuración:', result.debug_info);
-          }
-          if (result.errors) {
-              result.errors.forEach(error => {
-                  console.error('Error específico:', error);
-              });
-          }
-          setServerErrorMessage(result.message || 'Error en el servidor.');
+      } else {
+        console.error('Error en el registro:', result.message);
+        if (result.debug_info) {
+          console.error('Información de depuración:', result.debug_info);
+        }
+        if (result.errors) {
+          result.errors.forEach(error => {
+            console.error('Error específico:', error);
+          });
+        }
+        setServerErrorMessage(result.message || 'Error en el servidor.');
       }
-      
-  } catch (error) {
+    } catch (error) {
       console.error('Error 500', error);
       setTimeout(() => {
-          alert('¡Ay caramba! Encontramos un pequeño obstáculo en el camino, pero estamos trabajando para superarlo. Gracias por tu paciencia mientras solucionamos este problemita.'); 
-        }, 2000);
-  } finally {
-      setIsLoading(false);
-  }
+        alert('¡Ay caramba! Encontramos un pequeño obstáculo en el camino, pero estamos trabajando para superarlo. Gracias por tu paciencia mientras solucionamos este problemita.'); 
+      }, 2000);
+    } finally {
+        setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -91,11 +83,9 @@ const getUsuarios = ()=>{
       onloadProductos()
     }
   }, []);
-  const onloadDatosProducto = async () => 
-  {
-    try 
-    {
 
+  const onloadDatosProducto = async () => {
+    try {
       const response = await fetch('http://localhost/webservice_alevosia/obtenerDatosProducto.php', {
           method: 'POST',
           headers: 

@@ -5,10 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../App.css';
 
 import main2 from '../image/main2.jpg';
-import banner2 from '../image/banner2.webp';
-import banner3 from '../image/banner3.webp';
-import banner4 from '../image/banner4.webp';
-import banner5 from '../image/banner5.webp';
+import main3 from '../image/main3.jpg';
+import main4 from '../image/main4.jpg';
+import main5 from '../image/main5.jpg';
 
 const Carousel = () => {
   const settings = {
@@ -30,13 +29,13 @@ const Carousel = () => {
         <img class="slider" src={main2} alt="imagen1" />
       </div>
       <div>
-        <img class="slider" src={banner2} alt="imagen2" />
+        <img class="slider" src={main3} alt="imagen2" />
       </div>
       <div>
-        <img class="slider" src={banner4} alt="imagen3" />
+        <img class="slider" src={main4} alt="imagen3" />
       </div>
       <div>
-        <img class="slider" src={banner5} alt="imagen3" />
+        <img class="slider" src={main5} alt="imagen3" />
       </div>
     </Slider>
   );

@@ -41,7 +41,7 @@ function Registro2 () {
             alert("Usuario registrado");
         });
     }
-
+    
     const getUsuarios = ()=>{
         Axios.get("http://localhost:3001/bitacora").then((response)=>{
             setUsuarios(response.data);

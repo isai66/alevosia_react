@@ -13,12 +13,14 @@ const CartElements = () => {
         });
         setCart(newCart);
     };
+
   return cart.map((product)=>{
     const urlImage='../image/'
     return(
         <div class="cartContent" key={product.ID_Prenda}>
             <img src={`${urlImage}${product.Imagen}`}/>
             <h3 class="name">{product.Nombre}</h3>
+            
             <CartItemCounter product={product}/>
             <h4 class="price">${product.Precio * product.Cantidad}</h4>
             <h3 class='cart-delete-button' onClick={()=>deleteProduct(product.ID_Prenda)}>❌</h3>

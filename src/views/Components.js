@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Alert,Checkbox, Label, Button, Select } from 'flowbite-react';
 
-
 const SelectComponent = ({ label, id, name, onSelectChange, options, ...rest }) => { 
     const handleSelectChange = (e) => {
     const selectedValue = e.target.value;

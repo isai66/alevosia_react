@@ -1,4 +1,3 @@
-
 import '../css/404.css'
 import { Link } from 'react-router-dom';
 

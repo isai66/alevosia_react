@@ -4,10 +4,7 @@ import collection from '../image/collection.svg';
 import ropa1 from '../image/ropa1.jpg';
 import ropa2 from '../image/ropa2.jpg';
 import ropa3 from '../image/ropa3.jpg';
-import banner2 from '../image/banner2.webp';
-import banner3 from '../image/banner3.webp';
-import banner4 from '../image/banner4.webp';
-import banner5 from '../image/banner5.webp';
+
 import { useAuth } from '../components/authUser'; 
 
 import BreadCrumb from '../components/BreadCrumb';
@@ -15,12 +12,6 @@ import BreadCrumb from '../components/BreadCrumb';
 import ReactDOM from 'react-dom';
 import Carousel from '../components/Carousel';
 
-const images = [
-  'banner2',
-  'banner3',
-  'banner4',
-  'banner5'
-];
 
 const Inicio = () => {
   const { isAuthenticated, userData } = useAuth();

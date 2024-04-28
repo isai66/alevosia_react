@@ -24,7 +24,7 @@ const EnviarCorreo = () => {
         };
     
         try {
-          const response = await axios.post('https://telesecundaria763.host8b.me/Web_Services/TeleSecundaria763/correoLalo2.php', datos, {
+          const response = await axios.post('https://alevosia.host8b.me/Web_Services/Alevosia/correoChay.php', datos, {
             headers: {
               'Content-Type': 'application/json',
             },

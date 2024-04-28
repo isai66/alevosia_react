@@ -7,7 +7,6 @@ import { AiOutlineSwapRight } from "react-icons/ai";
 import "../css/login.css"
 
 const Login = () => {
-
     const [loginUsuario,setLoginUsuario]=useState("");
     const [loginContrasena,setLoginContrasena]=useState("");
     const navigateTo = useNavigate();
@@ -16,7 +15,6 @@ const Login = () => {
     const[statusHolder,setStatusHolder] = useState('message')
 
     const loginUser = (e)=>{
-
         e.preventDefault();
         Axios.post("http://localhost:3001/login",{
             loginUsuario:loginUsuario,

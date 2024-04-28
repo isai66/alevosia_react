@@ -8,9 +8,7 @@ import { useAuth } from '../components/authUser';
 import "../css/login.css"
 import Carrito2 from './Carrito2';
 
-
 const Login = () => {
-
     const [loginUsuario,setLoginUsuario]=useState("");
     const [loginContrasena,setLoginContrasena]=useState("");
     const navigateTo = useNavigate();
@@ -22,10 +20,11 @@ const Login = () => {
     const[statusHolder,setStatusHolder] = useState('message')
 
     const loginUser = (e)=>{
-
         e.preventDefault();
-      /*  console.log({loginUsuario:loginUsuario,
-                    loginContrasena: loginContrasena})*/
+        /*
+        console.log({loginUsuario:loginUsuario,
+        loginContrasena: loginContrasena})
+        */
         
         const data ={
             loginUsuario:loginUsuario,
@@ -41,12 +40,9 @@ const Login = () => {
         })
         .then(response => response.json())
         .then(result => {
-            
             console.log(result)
             console.log("DATOS DEL USUARIO: ",result.data)
-
             if(result.token){
-
                 login(result.token, result.data); // Almacena el token JWT en el almacenamiento local
                 navigateTo('/');
                 //localStorage.setItem('token',result.token)
@@ -54,13 +50,10 @@ const Login = () => {
             }else{
                 //setLoginSuccessful(false);
             }
-
-            
         })
         .catch(error=>{
             console.log(error)
         })
-
        /* Axios.post("http://localhost:3001/login",{
             loginUsuario:loginUsuario,
             loginContrasena:loginContrasena,

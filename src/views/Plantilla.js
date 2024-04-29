@@ -59,14 +59,10 @@ const Plantilla = props =>{
               {isAuthenticated ? <button onClick={logout}>Cerrar Sesion</button> : ""} 
             </li>
           </ul>
-          <div class="divisor">
-            <div>
-              <img src={divisor}/>
+          <div class='cajaDivPlantilla'>
+                <div class='cajaPlantilla'>
+                </div>
             </div>
-            <div>
-              <img src={divisor}/>
-            </div>
-          </div>
         </nav> 
         <Outlet/>
         {/*<footer class="pie-pagina">
@@ -101,12 +97,12 @@ const Plantilla = props =>{
         </footer>*/}
         <footer class="pie-pagina">
           <div>
-            <a href="docs/AVISO_PRIVACIDAD_ALEVOSIA_15-NOV-2023.pdf"class="pie-pagina">Politica de privacidad</a>
+            <a href="docs/AVISO_PRIVACIDAD_ALEVOSIA_15-NOV-2023.pdf">Politica de privacidad</a>
             <div class="red-social">
-              <a href="https://facebook.com/Alevosiaboutique"class="pie-pagina"><FaFacebook/></a>
-              <a href="https://www.instagram.com/alevosia.boutique/" class="pie-pagina"><FaInstagram/></a>
+              <a href="https://facebook.com/Alevosiaboutique"><FaFacebook/></a>
+              <a href="https://www.instagram.com/alevosia.boutique/" ><FaInstagram/></a>
             </div>
-            <span class="pie-pagina">© 2024 Creado por Alevosía Boutique</span>
+            <span>© 2024 Creado por Alevosía Boutique</span>
           </div>
         </footer>
       </div>

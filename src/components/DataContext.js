@@ -7,7 +7,6 @@ const DataProvider = ({children}) => {
     
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
     const [data, setData] = useState([]);
     const [cart, setCart] = useState(savedCart);
 

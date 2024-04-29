@@ -9,7 +9,7 @@ const Somos = () =>{
   <BreadCrumb/>
   </div>
 <div class="banner1">
-    <img src={banners}/>
+    <img class='banner2' src={banners}/>
     <h1 class="alevosianame">ALEVOSÍA BOUTIQUE</h1>
 </div>
 <div class="detalles">

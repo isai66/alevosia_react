@@ -26,8 +26,7 @@ const Inicio = () => {
       <div class="main2">
         <img src={collection}/>
         <div class="collection">
-          <h2>Nueva colección de invierno</h2>
-          <h3>VER COLECCIÓN</h3>
+          <h2>Nueva colección de primavera</h2>
         </div>
       </div>
       <div class="venta">

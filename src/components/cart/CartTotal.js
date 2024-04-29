@@ -12,7 +12,7 @@ const CartTotal = () => {
     return (
         <div class="cartTotal">
             <h3>Total a pagar: ${total}</h3>
-            <PayPalButton total={total} />
+            <center><PayPalButton total={total} /></center>
         </div>
     )
 }

@@ -46,11 +46,11 @@
 .body{
   background-color: #eee4e0;
   margin: 0;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -62,14 +62,7 @@ code {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-width:680px){
-  .divisor{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 5pt;
-    width: 2%;
-  }
-}
+
 .usersvg{
   height: 20pt;
 }
@@ -114,7 +107,7 @@ li a.active, li a:hover{
   display: flex;
   position: absolute;
   height: 180pt;
-  top: 315pt;
+  top: 290pt;
   left: 150pt;
   color: white;
   text-shadow:1pt 1pt 2pt black;
@@ -123,7 +116,7 @@ li a.active, li a:hover{
   position: absolute;
   left: 8%; 
   right: 5%; 
-  top: 15%; 
+  top: 28%; 
   text-align: center;
 }
 .ropa1{
@@ -141,8 +134,22 @@ li a.active, li a:hover{
   padding-top: 10pt;
 }
 .banner1{
+  width: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+    display: block; 
+}
+.cajaDivPlantilla{
   display: flex;
   justify-content: center;
+  padding: 1%;
+}
+.cajaPlantilla {
+  max-width: 945px;
+  max-height: 3px;
+  width: 100vw; /* El ancho será el 50% del ancho de la ventana */
+  height: 100vh; /* La altura será el 50% de la altura de la ventana */
+  background-color: rgb(82, 83, 75); /* Color de fondo (cambia según tus necesidades) */
+  justify-content: center;
+  border-radius: 20px;
 }
 .producto{
   padding-top: 20pt;
@@ -166,8 +173,7 @@ li a.active, li a:hover{
 .detalles{
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
-  padding: 1% 17% 0% 17%;
+  padding: 0% 17% 3% 17%;
   padding-top: 2%;
 }
 .somos{
@@ -176,70 +182,26 @@ li a.active, li a:hover{
 .somosimg{height: 400pt;}
 
 
-.pie-pagina{
+footer{
   padding-top: 1%;
   padding-bottom: 1%;
   width: 100%;
   background-color: rgb(44, 38, 38);
   display: flex;
  /* color: rgb(139, 20, 20);*/
- color: white;
+  color: white;
   justify-content: center;
-  margin-top: 8%;
+  margin-top: 5%;
   font-size: 15px;
 }
 
-.pie-pagina .grupo-1{
-  width: 100%;
- /* max-width: 1200px;*/
-  margin: auto;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
-  width: 100%;
-  height: 100%;
+.red-social{
+  justify-content: space-evenly;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-  width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-  color: #fff;
-  margin-bottom: 25px;
-  font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-  color: #efefef;
-  margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-  flex-direction: column;
+  flex-direction: row;
   text-decoration: none;
-  width: 45px;
-  height: 45px;
   line-height: 45px;
-  color: #fff;
-  margin-right: 10px;
-
-  text-align: center;
-  transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-  color: aqua;
-}
-.pie-pagina .grupo-2{
-  background-color: #0a1a2a;
-  padding: 15px 10px;
-  text-align: center;
-  color: #fff;
-}
-.pie-pagina .grupo-2 small{
-  font-size: 15px;
+  color: #ffffff;
 }
 
 .mejoreshombre{
@@ -314,19 +276,51 @@ li a.active, li a:hover{
 .producto1lin1wo{
   display:flex;
 }
-.alevosianame{position: absolute; /* Establece el texto como posicionamiento absoluto */
-  top: 50%; /* Lo posiciona en el 50% de la parte superior del contenedor */
-  left: 50%; /* Lo posiciona en el 50% del lado izquierdo del contenedor */
-  transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro del contenedor */
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente para mayor legibilidad */
-  padding: 10px; }
+
+.alevosianame{
+    position: absolute; /* Establece el texto como posicionamiento absoluto */
+    top: 38.5%; /* Lo posiciona en el 50% de la parte superior del contenedor */
+    left: 50%; /* Lo posiciona en el 50% del lado izquierdo del contenedor */
+    transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro del contenedor */
+    padding: 10px; 
+    color: white;  
+  }
+  @media screen and (max-width:1000px){
+    .banner2{
+      width: 80%;
+    }
+    .alevosianame{
+      width: 80%;
+      position: absolute; /* Establece el texto como posicionamiento absoluto */
+      top: 25.5%; /* Lo posiciona en el 50% de la parte superior del contenedor */
+      left: 50%; /* Lo posiciona en el 50% del lado izquierdo del contenedor */
+      transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro del contenedor */
+      padding: 10px; 
+      color: white;  
+    }
+  }
+  @media screen and (max-width:680px){
+    .banner2{
+      width: 80%;
+    }
+    .alevosianame{
+      font-size: 200%;
+      position: absolute; /* Establece el texto como posicionamiento absoluto */
+      top: 27.5%; /* Lo posiciona en el 50% de la parte superior del contenedor */
+      left: 50%; /* Lo posiciona en el 50% del lado izquierdo del contenedor */
+      transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro del contenedor */
+      padding: 10px; 
+      color: white;  
+    }
+
+  }
 
 .somos1{
   text-align: center; /* Para centrar horizontalmente el contenido */
   margin: 0 auto; /* Para centrar el contenedor en la página */
-  width: 80%; /* Ancho del contenedor, ajusta según tus necesidades */
+  width: 69%; /* Ancho del contenedor, ajusta según tus necesidades */
   border: 1px solid black; /* Solo para visualización, puedes eliminarlo */
-  padding: 20px;
+  padding: 0% 1% 3% 1%;
 }
 
 .slider{

@@ -2,7 +2,6 @@ import React from 'react';
 import { useContext } from "react";
 import { dataContext } from "./DataContext";
 import { useAuth } from '../components/authUser'; 
-
 import '../css/productos.css'
 import '../App.css'
 
